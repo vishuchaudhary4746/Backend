@@ -8,12 +8,39 @@ app.get('/', (req,res)=>{
 });
 
 
-//get a list of 5 jokes
+// get a list of 5 jokes
 
+app.get('/jokes',(req, res) => {
+    const jokes= [
+        {
+            id:1,
+            title: 'A joke',
+            content: 'This is a joke'
+        },
+        {
+            id:2,
+            title: 'Another joke',
+            content: 'This is another joke'
+        },
+                {
+            id:3,
+            title: 'A joke',
+            content: 'This is 3 a joke'
+        },
+                {
+            id:4,
+            title: 'A joke',
+            content: 'This is 4 a joke'
+        },
+                {
+            id:5,
+            title: 'A joke',
+            content: 'This is 5 a joke'
+        }
+    ];
 
-
-
-
+    res.send(jokes);
+});
 
 
 
